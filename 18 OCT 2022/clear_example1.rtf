@@ -1,0 +1,48 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html>\
+<head>\
+<style>\
+.div1 \{\
+  float: left;\
+  padding: 10px;\
+  border: 3px solid #73AD21;\
+\}\
+\
+.div2 \{\
+  padding: 10px;\
+  border: 3px solid red;\
+\}\
+\
+.div3 \{\
+  float: left;\
+  padding: 10px;  \
+  border: 3px solid #73AD21;\
+\}\
+\
+.div4 \{\
+  padding: 10px;\
+  border: 3px solid red;\
+  clear: left;\
+\}\
+</style>\
+</head>\
+<body>\
+\
+<h2>Without clear</h2>\
+<div class="div1">div1</div>\
+<div class="div2">div2 - Notice that div2 is after div1 in the HTML code. However, since div1 floats to the left, the text in div2 flows around div1.</div>\
+<br><br>\
+\
+<h2>With clear</h2>\
+<div class="div3">div3</div>\
+<div class="div4">div4 - Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>\
+\
+</body>\
+</html>}
