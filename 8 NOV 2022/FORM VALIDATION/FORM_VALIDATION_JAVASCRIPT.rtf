@@ -1,0 +1,71 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <script>\
+			function GEEKFORGEEKS() \{\
+				var name =\
+					document.forms.RegForm.Name.value;\
+				var email =\
+					document.forms.RegForm.EMail.value;\
+				var phone =\
+					document.forms.RegForm.Telephone.value;\
+				var what =\
+					document.forms.RegForm.Subject.value;\
+				var password =\
+					document.forms.RegForm.Password.value;\
+				var address =\
+					document.forms.RegForm.Address.value;\
+				var regEmail=/^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w\{2,3\})+$/g; //Javascript reGex for Email Validation.\
+				var regPhone=/^\\d\{10\}$/;									 // Javascript reGex for Phone Number validation.\
+				var regName = /\\d+$/g;								 // Javascript reGex for Name validation\
+\
+				if (name == "" || regName.test(name)) \{\
+					window.alert("Please enter your name properly.");\
+					name.focus();\
+					return false;\
+				\}\
+\
+				if (address == "") \{\
+					window.alert("Please enter your address.");\
+					address.focus();\
+					return false;\
+				\}\
+				\
+				if (email == "" || !regEmail.test(email)) \{\
+					window.alert("Please enter a valid e-mail address.");\
+					email.focus();\
+					return false;\
+				\}\
+				\
+				if (password == "") \{\
+					alert("Please enter your password");\
+					password.focus();\
+					return false;\
+				\}\
+\
+				if(password.length <6)\{\
+					alert("Password should be atleast 6 character long");\
+					password.focus();\
+					return false;\
+\
+				\}\
+				if (phone == "" || !regPhone.test(phone)) \{\
+					alert("Please enter valid phone number.");\
+					phone.focus();\
+					return false;\
+				\}\
+\
+				if (what.selectedIndex == -1) \{\
+					alert("Please enter your course.");\
+					what.focus();\
+					return false;\
+				\}\
+\
+				return true;\
+			\}\
+		</script>\
+}

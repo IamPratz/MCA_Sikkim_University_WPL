@@ -1,0 +1,327 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 CourierNewPS-BoldMT;\f1\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;\red244\green0\blue95;\red29\green30\blue26;\red255\green255\blue255;
+\red246\green246\blue239;\red224\green213\blue97;\red98\green94\blue76;}
+{\*\expandedcolortbl;;\cssrgb\c97647\c14902\c44706;\cssrgb\c15294\c15686\c13333;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c97255\c97255\c94902;\cssrgb\c90196\c85882\c45490;\cssrgb\c45882\c44314\c36863;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl352\partightenfactor0
+
+\f0\b\fs29\fsmilli14667 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 var
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 container = document.getElementById(\cf6 \strokec6 "array"\cf5 \strokec5 );
+\fs24 \cf4 \strokec4 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\fs29\fsmilli14667 \cf4 \'a0
+\fs24 \'a0\
+\pard\pardeftab720\sl352\partightenfactor0
+
+\fs29\fsmilli14667 \cf7 \strokec7 // Function to generate the array of blocks
+\fs24 \cf4 \strokec4 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\f0\b\fs29\fsmilli14667 \cf2 \strokec2 function
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 generatearray() \{
+\fs24 \cf4 \strokec4 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\fs29\fsmilli14667 \cf4 \'a0\'a0
+\f0\b \cf2 \strokec2 for
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 (
+\f0\b \cf2 \strokec2 var
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 i = 0; i < 20; i++) \{
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf7 \strokec7 // Return a value from 1 to 100 (both inclusive)
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0
+\f0\b \cf2 \strokec2 var
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 value = Math.ceil(Math.random() * 100);
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0
+\fs24 \'a0\
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf7 \strokec7 // Creating element div
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0
+\f0\b \cf2 \strokec2 var
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 array_ele = document.createElement(\cf6 \strokec6 "div"\cf5 \strokec5 );
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0
+\fs24 \'a0\
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf7 \strokec7 // Adding class 'block' to div
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 array_ele.classList.add(\cf6 \strokec6 "block"\cf5 \strokec5 );
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0
+\fs24 \'a0\
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf7 \strokec7 // Adding style to div
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 array_ele.style.height = `$\{value * 3\}px`;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 array_ele.style.transform = `translate($\{i * 30\}px)`;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0
+\fs24 \'a0\
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf7 \strokec7 // Creating label element for displaying
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf7 \strokec7 // size of particular block
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0
+\f0\b \cf2 \strokec2 var
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 array_ele_label = document.createElement(\cf6 \strokec6 "label"\cf5 \strokec5 );
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 array_ele_label.classList.add(\cf6 \strokec6 "block_id"\cf5 \strokec5 );
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 array_ele_label.innerText = value;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0
+\fs24 \'a0\
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf7 \strokec7 // Appending created elements to index.html
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 array_ele.appendChild(array_ele_label);
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 container.appendChild(array_ele);
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\cf5 \strokec5 \}
+\fs24 \cf4 \strokec4 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\fs29\fsmilli14667 \cf5 \strokec5 \}
+\fs24 \cf4 \strokec4 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\fs29\fsmilli14667 \cf4 \'a0
+\fs24 \'a0\
+\pard\pardeftab720\sl352\partightenfactor0
+
+\fs29\fsmilli14667 \cf7 \strokec7 // Asynchronous LinearSearch function
+\fs24 \cf4 \strokec4 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\fs29\fsmilli14667 \cf5 \strokec5 async 
+\f0\b \cf2 \strokec2 function
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 LinearSearch(delay = 300) \{
+\fs24 \cf4 \strokec4 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\fs29\fsmilli14667 \cf4 \'a0\'a0
+\f0\b \cf2 \strokec2 var
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 blocks = document.querySelectorAll(\cf6 \strokec6 ".block"\cf5 \strokec5 );
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0
+\f0\b \cf2 \strokec2 var
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 output = document.getElementById(\cf6 \strokec6 "text"\cf5 \strokec5 );
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0
+\fs24 \'a0\
+
+\fs29\fsmilli14667 \'a0\'a0\cf7 \strokec7 //Extracting the value entered by the user
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0
+\f0\b \cf2 \strokec2 var
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 num = document.getElementById(\cf6 \strokec6 "fname"\cf5 \strokec5 ).value;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0
+\fs24 \'a0\
+
+\fs29\fsmilli14667 \'a0\'a0\cf7 \strokec7 //Changing the color of all the blocks to violet
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0
+\f0\b \cf2 \strokec2 for
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 (
+\f0\b \cf2 \strokec2 var
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 i = 0; i < blocks.length; i += 1) \{
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 blocks[i].style.backgroundColor = \cf6 \strokec6 "#6b5b95"\cf5 \strokec5 ;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\cf5 \strokec5 \}
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0
+\fs24 \'a0\
+
+\fs29\fsmilli14667 \'a0\'a0\cf5 \strokec5 output.innerText = \cf6 \strokec6 ""\cf5 \strokec5 ;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0
+\fs24 \'a0\
+
+\fs29\fsmilli14667 \'a0\'a0
+\f0\b \cf2 \strokec2 var
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 flag = 0;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\cf7 \strokec7 // LinearSearch Algorithm
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0
+\f0\b \cf2 \strokec2 for
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 (
+\f0\b \cf2 \strokec2 var
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 i = 0; i < blocks.length; i += 1) \{
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf7 \strokec7 //Changing the color of current block to red
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 blocks[i].style.backgroundColor = \cf6 \strokec6 "#FF4949"\cf5 \strokec5 ;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0
+\fs24 \'a0\
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf7 \strokec7 // To wait for .1 sec
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 await 
+\f0\b \cf2 \strokec2 new
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 Promise((resolve) =>
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 setTimeout(() => \{
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 resolve();
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 \}, delay)
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 );
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0
+\fs24 \'a0\
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf7 \strokec7 //Extracting the value of current block
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0
+\f0\b \cf2 \strokec2 var
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 value = Number(blocks[i].childNodes[0].innerHTML);
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0
+\fs24 \'a0\
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf7 \strokec7 // To compare block value with entered value
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0
+\f0\b \cf2 \strokec2 if
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 (value == num) \{
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 flag = 1;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 output.innerText = \cf6 \strokec6 "Element Found"\cf5 \strokec5 ;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 blocks[i].style.backgroundColor = \cf6 \strokec6 "#13CE66"\cf5 \strokec5 ;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0
+\f0\b \cf2 \strokec2 break
+\f1\b0 \cf5 \strokec5 ;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 \} 
+\f0\b \cf2 \strokec2 else
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 \{
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 // Changing the color to the previous one
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 blocks[i].style.backgroundColor = \cf6 \strokec6 "#6b5b95"\cf5 \strokec5 ;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 \}
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\cf5 \strokec5 \}
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\cf7 \strokec7 //When element is not found in the array
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0
+\f0\b \cf2 \strokec2 if
+\f1\b0\fs24 \cf4 \strokec4  
+\fs29\fsmilli14667 \cf5 \strokec5 (flag == 0) \{
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\'a0\'a0\cf5 \strokec5 output.innerText = \cf6 \strokec6 "Element Not Found"\cf5 \strokec5 ;
+\fs24 \cf4 \strokec4 \
+
+\fs29\fsmilli14667 \'a0\'a0\cf5 \strokec5 \}
+\fs24 \cf4 \strokec4 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\fs29\fsmilli14667 \cf5 \strokec5 \}
+\fs24 \cf4 \strokec4 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\fs29\fsmilli14667 \cf4 \'a0
+\fs24 \'a0\
+\pard\pardeftab720\sl352\partightenfactor0
+
+\fs29\fsmilli14667 \cf7 \strokec7 // Calling generatearray function
+\fs24 \cf4 \strokec4 \
+\pard\pardeftab720\sl352\partightenfactor0
+
+\fs29\fsmilli14667 \cf5 \strokec5 generatearray();
+\fs24 \cf4 \strokec4 \
+}
